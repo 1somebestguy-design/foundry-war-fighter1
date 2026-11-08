@@ -17,7 +17,920 @@
     },
     "properties": [],
     "requirements": "",
-    "identifier": "streetfeat000001"
+    "identifier": "street-techniques",
+    "uses": {
+      "max": "@prof * 2",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "sr",
+          "type": "recoverAll"
+        },
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "stPlexus00000001": {
+        "_id": "stPlexus00000001",
+        "type": "utility",
+        "name": "Удар в сплетение — 1 очко",
+        "sort": 0,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": "Расходует 1 очк. приемов.",
+          "value": "<p>Совершите безоружную атаку. Затем мастер запрашивает у цели спасбросок Силы со Сл 8 + модификатор Силы + бонус мастерства и применяет дополнительный урон 2d6: полный при провале, половину при успехе.</p>"
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false,
+          "value": "",
+          "expiry": null
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "self",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": "",
+            "stationary": false
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self",
+            "special": ""
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "img": "",
+        "visibility": {
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": "",
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "behaviors": [],
+        "flags": {}
+      },
+      "stAtkPlexus00001": {
+        "_id": "stAtkPlexus00001",
+        "type": "attack",
+        "name": "Безоружная атака",
+        "sort": 10000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false,
+          "value": "",
+          "expiry": null
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "self",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": "",
+            "stationary": false
+          },
+          "affects": {
+            "choice": false,
+            "count": "1",
+            "type": "creature",
+            "special": ""
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "attack": {
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "unarmed"
+          },
+          "ability": "str",
+          "bonus": ""
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": false,
+          "parts": []
+        },
+        "img": "",
+        "visibility": {
+          "level": {
+            "min": 99,
+            "max": null
+          },
+          "identifier": "",
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "behaviors": [],
+        "flags": {}
+      },
+      "stDmgPlexus0001": {
+        "_id": "stDmgPlexus0001",
+        "type": "damage",
+        "name": "Дополнительный урон — 2d6",
+        "sort": 20000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false,
+          "value": "",
+          "expiry": null
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "self",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": "",
+            "stationary": false
+          },
+          "affects": {
+            "choice": false,
+            "count": "1",
+            "type": "creature",
+            "special": ""
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "modifiers": [],
+              "scaling": {
+                "mode": "",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "img": "",
+        "visibility": {
+          "level": {
+            "min": 99,
+            "max": null
+          },
+          "identifier": "",
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "behaviors": [],
+        "flags": {}
+      },
+      "stLash0000000001": {
+        "_id": "stLash0000000001",
+        "type": "utility",
+        "name": "Хлесткий удар — 1 очко",
+        "sort": 30000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": "Расходует 1 очк. приемов.",
+          "value": "<p>Совершите безоружную атаку и бросьте дополнительный урон 1d4 рубящего типа. Кровотечение отслеживается мастером.</p>"
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false,
+          "value": "",
+          "expiry": null
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "self",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": "",
+            "stationary": false
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self",
+            "special": ""
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "img": "",
+        "visibility": {
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": "",
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "behaviors": [],
+        "flags": {}
+      },
+      "stAtkLash000001": {
+        "_id": "stAtkLash000001",
+        "type": "attack",
+        "name": "Безоружная атака",
+        "sort": 40000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false,
+          "value": "",
+          "expiry": null
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "self",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": "",
+            "stationary": false
+          },
+          "affects": {
+            "choice": false,
+            "count": "1",
+            "type": "creature",
+            "special": ""
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "attack": {
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "unarmed"
+          },
+          "ability": "str",
+          "bonus": ""
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": false,
+          "parts": []
+        },
+        "img": "",
+        "visibility": {
+          "level": {
+            "min": 99,
+            "max": null
+          },
+          "identifier": "",
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "behaviors": [],
+        "flags": {}
+      },
+      "stDmgLash000001": {
+        "_id": "stDmgLash000001",
+        "type": "damage",
+        "name": "Урон — 1d4 рубящий",
+        "sort": 50000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false,
+          "value": "",
+          "expiry": null
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "self",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": "",
+            "stationary": false
+          },
+          "affects": {
+            "choice": false,
+            "count": "1",
+            "type": "creature",
+            "special": ""
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "",
+              "types": [
+                "slashing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "modifiers": [],
+              "scaling": {
+                "mode": "",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "img": "",
+        "visibility": {
+          "level": {
+            "min": 99,
+            "max": null
+          },
+          "identifier": "",
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "behaviors": [],
+        "flags": {}
+      },
+      "stGrapple0000001": {
+        "_id": "stGrapple0000001",
+        "type": "utility",
+        "name": "Захват и подножка — 2 очка",
+        "sort": 60000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "2",
+              "target": "",
+              "scaling": {}
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": "Расходует 2 очк. приемов.",
+          "value": "<p>Замените одну атаку проверкой Атлетики. Цель должна быть не более чем на один размер больше вас. Мастер запрашивает у цели встречную проверку Атлетики или Акробатики.</p>"
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false,
+          "value": "",
+          "expiry": null
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "self",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": "",
+            "stationary": false
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self",
+            "special": ""
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "img": "",
+        "visibility": {
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": "",
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "behaviors": [],
+        "flags": {}
+      },
+      "stShove000000001": {
+        "_id": "stShove000000001",
+        "type": "utility",
+        "name": "Толчок — 1 очко",
+        "sort": 70000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": "Расходует 1 очк. приемов.",
+          "value": "<p>Совершите безоружную атаку и бросьте урон 1d4 + модификатор Силы дробящего типа.</p>"
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false,
+          "value": "",
+          "expiry": null
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "self",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": "",
+            "stationary": false
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self",
+            "special": ""
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "img": "",
+        "visibility": {
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": "",
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "behaviors": [],
+        "flags": {}
+      },
+      "stAtkShove00001": {
+        "_id": "stAtkShove00001",
+        "type": "attack",
+        "name": "Безоружная атака",
+        "sort": 80000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false,
+          "value": "",
+          "expiry": null
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "self",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": "",
+            "stationary": false
+          },
+          "affects": {
+            "choice": false,
+            "count": "1",
+            "type": "creature",
+            "special": ""
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "attack": {
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "unarmed"
+          },
+          "ability": "str",
+          "bonus": ""
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": false,
+          "parts": []
+        },
+        "img": "",
+        "visibility": {
+          "level": {
+            "min": 99,
+            "max": null
+          },
+          "identifier": "",
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "behaviors": [],
+        "flags": {}
+      },
+      "stDmgShove00001": {
+        "_id": "stDmgShove00001",
+        "type": "damage",
+        "name": "Урон — 1d4 + Сила дробящий",
+        "sort": 90000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false,
+          "value": "",
+          "expiry": null
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "self",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": "",
+            "stationary": false
+          },
+          "affects": {
+            "choice": false,
+            "count": "1",
+            "type": "creature",
+            "special": ""
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@abilities.str.mod",
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "modifiers": [],
+              "scaling": {
+                "mode": "",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "img": "",
+        "visibility": {
+          "level": {
+            "min": 99,
+            "max": null
+          },
+          "identifier": "",
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "behaviors": [],
+        "flags": {}
+      }
+    }
   },
   "effects": [],
   "folder": null,
