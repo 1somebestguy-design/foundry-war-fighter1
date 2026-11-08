@@ -1,0 +1,30 @@
+{
+  "_id": "streetfeat000006",
+  "name": "Выход за предел",
+  "type": "feat",
+  "img": "icons/skills/melee/unarmed-punch-fist.webp",
+  "system": {
+    "description": {
+      "value": "<h3>Выход за предел</h3><p>Потратьте очки приемов в количестве, равном числу атак, на которые влияет способность. За каждое потраченное очко получите уровень истощения через 2d4 раунда. Эти атаки совершаются с преимуществом, а их урон нельзя уменьшить никаким способом, включая иммунитет. Восстановление: продолжительный отдых.</p>"
+    },
+    "source": {
+      "custom": "Боец — Дитя улицы"
+    },
+    "advancement": [],
+    "prerequisites": {
+      "level": null,
+      "repeatable": false
+    },
+    "properties": [],
+    "requirements": "",
+    "identifier": "streetfeat000006"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!streetfeat000006"
+}
