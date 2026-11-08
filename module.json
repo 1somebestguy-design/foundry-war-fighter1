@@ -2,7 +2,7 @@
   "id": "foundry-war-fighter1",
   "title": "Боец — Дитя улицы",
   "description": "Подкласс Боец для D&D 5e в Foundry VTT.",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "compatibility": {
     "minimum": "14",
     "verified": "14"
