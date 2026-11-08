@@ -21,7 +21,17 @@ jobs:
       - name: Build compendium pack
         run: |
           npm install --no-save @foundryvtt/foundryvtt-cli
-          node --input-type=module -e 'import { compilePack } from "@foundryvtt/foundryvtt-cli"; await compilePack("packs/src/warfighter", "packs/warfighter", { log: true });'
+          node --input-type=module <<'NODE'
+          import { compilePack, extractPack } from "@foundryvtt/foundryvtt-cli";
+          import { readdir, rm } from "node:fs/promises";
+          await compilePack("packs/src/warfighter", "packs/warfighter", { log: true });
+          const verifyDir = "/tmp/warfighter-pack-verify";
+          await rm(verifyDir, { recursive: true, force: true });
+          await extractPack("packs/warfighter", verifyDir, { log: true });
+          const files = (await readdir(verifyDir)).filter(file => file.endsWith(".json"));
+          if (files.length === 0) throw new Error("Compendium verification failed: no documents were compiled.");
+          console.log(`Verified compendium documents: ${files.length}`);
+          NODE
       - name: Package module
         run: |
           mkdir -p dist
