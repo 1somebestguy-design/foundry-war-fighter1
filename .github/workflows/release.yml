@@ -67,6 +67,7 @@ jobs:
           const hasChange = (id, key, value) => (byId.get(id)?.effects ?? [])
             .some(effect => (effect.system?.changes ?? []).some(change => change.key === key && String(change.value) === String(value)));
           if (!hasChange("streetfeat000002", "system.attributes.movement.walk", 10)) throw new Error("Automatic speed increase is missing.");
+          if (!hasChange("streetfeat000002", "flags.dnd5e.powerfulBuild", true)) throw new Error("Powerful Build effect is missing.");
           if (!hasChange("streetfeat000003", "system.attributes.ac.calcs", "streetFighter")) throw new Error("Steel Muscles AC calculation is missing.");
           if (!hasChange("streetfeat000003", "system.traits.ci.value", "stunned")) throw new Error("Stunned immunity is missing.");
           if (!hasChange("streetfeat000004", "system.attributes.senses.blindsight", 15)) throw new Error("Blindsight effect is missing.");

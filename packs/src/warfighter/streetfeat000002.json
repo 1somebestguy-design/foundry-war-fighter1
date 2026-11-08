@@ -52,6 +52,16 @@
             "phase": "initial",
             "conditions": "{}",
             "replacement": ""
+          },
+          {
+            "key": "flags.dnd5e.powerfulBuild",
+            "value": true,
+            "priority": null,
+            "type": "override",
+            "phase": "initial",
+            "_id": "stPowerfulBuild01",
+            "conditions": "{}",
+            "replacement": ""
           }
         ],
         "rider": {
