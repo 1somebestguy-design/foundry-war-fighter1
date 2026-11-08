@@ -1,0 +1,30 @@
+{
+  "_id": "streetfeat000002",
+  "name": "Сверхъестественное мастерство",
+  "type": "feat",
+  "img": "icons/skills/melee/unarmed-punch-fist.webp",
+  "system": {
+    "description": {
+      "value": "<h3>Сверхъестественное мастерство</h3><p>Считайтесь на один размер больше при определении грузоподъемности, толкания, перетаскивания и подъема. Дистанция прыжков удваивается. Скорость увеличивается на 10 футов. Можно тратить 1 очко приемов за каждые дополнительные 5 футов перемещения.</p><p>Урон безоружным ударом: 1d4 на 3-м уровне, 1d6 на 5-м, 1d8 на 11-м и 1d10 на 17-м уровне.</p>"
+    },
+    "source": {
+      "custom": "Боец — Дитя улицы"
+    },
+    "advancement": [],
+    "prerequisites": {
+      "level": null,
+      "repeatable": false
+    },
+    "properties": [],
+    "requirements": "",
+    "identifier": "streetfeat000002"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!streetfeat000002"
+}
