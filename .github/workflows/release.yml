@@ -1,0 +1,27 @@
+name: Package Foundry module
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Package module
+        run: |
+          mkdir -p dist
+          zip -j dist/module.zip module.json scripts/warfighter.js
+          cp module.json dist/module.json
+      - name: Publish release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/module.json
+            dist/module.zip
