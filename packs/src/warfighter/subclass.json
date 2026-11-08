@@ -12,10 +12,9 @@
     "spellcasting": {
       "progression": "none",
       "ability": "",
-      "preparation": {
-        "formula": ""
-      }
-    }
+      "preparation": {}
+    },
+    "identifier": "street-fighter"
   },
   "effects": [],
   "folder": null,
