@@ -2,7 +2,7 @@
   "id": "foundry-war-fighter1",
   "title": "Боец — Дитя улицы",
   "description": "Подкласс Боец для D&D 5e в Foundry VTT.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "compatibility": {
     "minimum": "14",
     "verified": "14"
@@ -12,8 +12,25 @@
       "name": "1somebestguy-design"
     }
   ],
-  "systems": ["dnd5e"],
-  "esmodules": ["scripts/warfighter.js"],
+  "systems": [
+    "dnd5e"
+  ],
+  "esmodules": [
+    "scripts/warfighter.js"
+  ],
   "manifest": "https://github.com/1somebestguy-design/foundry-war-fighter1/releases/latest/download/module.json",
-  "download": "https://github.com/1somebestguy-design/foundry-war-fighter1/releases/latest/download/module.zip"
+  "download": "https://github.com/1somebestguy-design/foundry-war-fighter1/releases/latest/download/module.zip",
+  "packs": [
+    {
+      "name": "warfighter",
+      "label": "Боец — Дитя улицы",
+      "path": "packs/warfighter",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ]
 }
