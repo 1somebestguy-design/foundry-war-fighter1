@@ -33,6 +33,12 @@ jobs:
           const files = (await readdir(verifyDir)).filter(file => file.endsWith(".json"));
           const docs = await Promise.all(files.map(async file => JSON.parse(await readFile(`${verifyDir}/${file}`, "utf8"))));
           const byId = new Map(docs.map(doc => [doc._id, doc]));
+          for (const doc of docs) {
+            for (const effect of (doc.effects ?? [])) {
+              const expectedKey = `!items.effects!${doc._id}.${effect._id}`;
+              if (effect._key !== expectedKey) throw new Error(`Embedded effect ${effect._id} in ${doc._id} has an invalid _key.`);
+            }
+          }
           const subclass = byId.get("streetfighter001");
           if (!subclass) throw new Error("Compendium verification failed: subclass document is missing.");
           const advancements = subclass.system?.advancement ?? [];
