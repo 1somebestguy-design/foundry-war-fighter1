@@ -14,10 +14,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build compendium pack
+        run: |
+          npm install --no-save @foundryvtt/foundryvtt-cli
+          node --input-type=module -e 'import { compilePack } from "@foundryvtt/foundryvtt-cli"; await compilePack("packs/src/warfighter", "packs/warfighter", { log: true });'
       - name: Package module
         run: |
           mkdir -p dist
-          zip -r dist/module.zip module.json scripts/
+          zip -r dist/module.zip module.json scripts/ packs/warfighter/
           cp module.json dist/module.json
       - name: Publish release assets
         uses: softprops/action-gh-release@v2
