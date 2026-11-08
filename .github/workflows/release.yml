@@ -17,7 +17,7 @@ jobs:
       - name: Package module
         run: |
           mkdir -p dist
-          zip -j dist/module.zip module.json scripts/warfighter.js
+          zip -r dist/module.zip module.json scripts/
           cp module.json dist/module.json
       - name: Publish release assets
         uses: softprops/action-gh-release@v2
