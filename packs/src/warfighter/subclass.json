@@ -10,13 +10,11 @@
     "classIdentifier": "fighter",
     "advancement": {},
     "spellcasting": {
-      "ability": "",
       "progression": "none",
+      "ability": "",
       "preparation": {
-        "mode": "",
-        "prepared": 0
-      },
-      "ritual": false
+        "formula": ""
+      }
     }
   },
   "effects": [],
