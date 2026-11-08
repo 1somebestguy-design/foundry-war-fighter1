@@ -1,0 +1,30 @@
+{
+  "_id": "streetfeat000005",
+  "name": "Подавляющее преимущество",
+  "type": "feat",
+  "img": "icons/skills/melee/unarmed-punch-fist.webp",
+  "system": {
+    "description": {
+      "value": "<h3>Подавляющее преимущество</h3><p>При спасброске Ловкости, который обычно уменьшает урон вдвое, успешный спасбросок позволяет не получить урон, а провал — получить половину. Реакцией можно потратить 5 очков приемов, чтобы уклониться от атаки, направленной на вас, и контратаковать.</p>"
+    },
+    "source": {
+      "custom": "Боец — Дитя улицы"
+    },
+    "advancement": [],
+    "prerequisites": {
+      "level": null,
+      "repeatable": false
+    },
+    "properties": [],
+    "requirements": "",
+    "identifier": "streetfeat000005"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!streetfeat000005"
+}
