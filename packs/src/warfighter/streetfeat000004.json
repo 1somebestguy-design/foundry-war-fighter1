@@ -1,0 +1,30 @@
+{
+  "_id": "streetfeat000004",
+  "name": "Опыт мастера",
+  "type": "feat",
+  "img": "icons/skills/melee/unarmed-punch-fist.webp",
+  "system": {
+    "description": {
+      "value": "<h3>Опыт мастера</h3><p>Вы получаете слепое зрение в радиусе 15 футов.</p>"
+    },
+    "source": {
+      "custom": "Боец — Дитя улицы"
+    },
+    "advancement": [],
+    "prerequisites": {
+      "level": null,
+      "repeatable": false
+    },
+    "properties": [],
+    "requirements": "",
+    "identifier": "streetfeat000004"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_key": "!items!streetfeat000004"
+}
